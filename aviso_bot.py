@@ -13,10 +13,10 @@ def run_bot():
 
         # Авторизация
         page.goto("https://aviso.bz/login")
-page.wait_for_selector("input[name='login']", timeout=10000)
-html = page.content()
-print("=== HTML контент страницы логина ===")
-print(html)
+        page.wait_for_selector("input[name='login']", timeout=10000)
+        html = page.content()
+        print("=== HTML контент страницы логина ===")
+        print(html)
 
         page.fill("input[name='login']", LOGIN)
         page.fill("input[name='password']", PASSWORD)
